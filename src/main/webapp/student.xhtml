@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:metadata>
+	<f:event type="preRenderView"
+		listener="#{studentController.loadStudents()}" />
+</f:metadata>
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>#{messages['titre.detailstudent']}</title>
+
+	<h:outputStylesheet library="css" value="style.css"/>
+	<h:outputStylesheet library="css" value="css/bootstrap/css/bootstrap.min.css"/>
+</h:head>
+
+<h:body>
+
+	<div id="wrapper">
+		<div id="header">
+			<h2>#{messages['student.nomuniversite']}</h2>
+		</div>
+	</div>
+
+	<div id="container">
+		<h3>#{messages['updatestudent.updatestudent']}</h3>
+
+		<h:messages globalOnly="true" />
+
+			<h:panelGrid columns="2">
+
+				<h:outputLabel>#{messages['student.firstname']} :</h:outputLabel>
+				<h:outputLabel>#{student.firstName}</h:outputLabel>
+
+				<h:outputLabel>#{messages['student.lastname']} :</h:outputLabel>
+				<h:outputLabel>#{student.lastName}</h:outputLabel>
+
+
+				<h:outputLabel>#{messages['student.email']} :</h:outputLabel>
+				<h:outputLabel>#{student.email}</h:outputLabel>
+
+			</h:panelGrid>
+
+
+		<div style="clear: both;"></div>
+
+		<p>
+			<h:outputLink value="list-students.xhtml">#{messages['addstudent.backtolist']}</h:outputLink>
+		</p>
+
+	</div>
+</h:body>
+</html>

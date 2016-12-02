@@ -113,6 +113,35 @@ public class StudentController implements Serializable{
 
 		return "update-student-form.xhtml";
 	}
+	
+	public String detailStudent(int studentId) {
+
+		logger.info("loading student: " + studentId);
+
+		try {
+			// get student from database
+			Student theStudent = service.getStudent(studentId);
+
+			// put in the request attribute ... so we can use it on the form
+			// page
+			ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+
+			Map<String, Object> requestMap = externalContext.getRequestMap();
+			requestMap.put("student", theStudent);
+
+		} catch (Exception exc) {
+			// send this to server logs
+			logger.log(Level.SEVERE, "Error loading student id:" + studentId, exc);
+
+			// add error message for JSF page
+			addErrorMessage(exc);
+
+			return null;
+		}
+
+		return "student.xhtml";
+	}
+	
 
 	public String updateStudent(Student theStudent) {
 

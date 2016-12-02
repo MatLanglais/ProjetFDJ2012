@@ -7,48 +7,62 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>Update Student</title>
-	
-	<h:outputStylesheet library="css" name="style.css"  />
-	<h:outputStylesheet library="css" name="add-student-style.css"  />
-	
+	<title>#{messages['titre.updatestudent']}</title>
+
+	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="css" name="add-student-style.css" />
+
 </h:head>
 
 <h:body>
 
 	<div id="wrapper">
 		<div id="header">
-			<h2>FooBar University</h2>
+			<h2>#{messages['student.nomuniversite']}</h2>
 		</div>
 	</div>
-	
+
 	<div id="container">
-		<h3>Update Student</h3>
+		<h3>#{messages['updatestudent.updatestudent']}</h3>
 
 		<h:messages globalOnly="true" />
 
-		<h:form id="form" style="margin-top: 10px;" >
+		<h:form id="form" style="margin-top: 10px;">
 			<h:panelGrid columns="3">
-			
-				<h:outputLabel>First name:</h:outputLabel> <h:inputText value="#{student.firstName}" id="firstName" /> <h:message for="firstName" />
-	
-				<h:outputLabel>Last name:</h:outputLabel> <h:inputText value="#{student.lastName}" id="lastName" /> <h:message for="lastName" />
-	
-				<h:outputLabel>Email:</h:outputLabel> <h:inputText value="#{student.email}" id="email" 
-									required="true"
-            							requiredMessage="Your email is mandatory."/> 	<h:message for="email"  />
-				
-				 <h:inputHidden value="#{student.id}" />
-				
-				 <h:commandButton value="Save" styleClass="save" action="#{studentController.updateStudent(student)}"/>
-			
+
+				<h:outputLabel>#{messages['student.firstname']} :</h:outputLabel>
+				<h:inputText value="#{student.firstName}" id="firstName"
+					required="true"
+					requiredMessage="#{messages['addstudent.errorfirstname']}" />
+				<h:message for="firstName" />
+
+				<h:outputLabel>#{messages['student.lastname']} :</h:outputLabel>
+				<h:inputText value="#{student.lastName}" id="lastName"
+					required="true"
+					requiredMessage="#{messages['addstudent.errorlastname']}" />
+				<h:message for="lastName" />
+
+				<h:outputLabel>#{messages['student.email']} :</h:outputLabel>
+				<h:inputText value="#{student.email}" id="email" required="true"
+					requiredMessage="#{messages['addstudent.erroremail']}">
+					<f:validator validatorId="emailValidator" />
+				</h:inputText>
+				<h:message for="email" />
+
+				<h:inputHidden value="#{student.id}" />
+
+				<h:commandButton value="#{messages['updatestudent.update']}" styleClass="save"
+					action="#{studentController.updateStudent(student)}" />
+
 			</h:panelGrid>
 		</h:form>
 
 		<div style="clear: both;"></div>
 
-		<p><h:outputLink value="list-students.xhtml">Back to List</h:outputLink></p>
+		<p>
+			<h:outputLink value="list-students.xhtml">#{messages['addstudent.backtolist']}</h:outputLink>
+		</p>
 
-	</div>	
+	</div>
 </h:body>
 </html>
