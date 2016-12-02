@@ -1,0 +1,75 @@
+html {
+	background-color: #EEE;
+}
+
+body {
+	width: 800px;
+	margin: 10px auto 10px auto;
+	background-color: white;
+	border: 1px solid #0080c0;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.row_space {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+/* .row_space:nth-child(even) { */
+/* 	margin-bottom: 5px; */
+/* 	margin-top: 5px; */
+/* 	background-color: #d0f2fd; */
+/* } */
+
+.row_head {
+	font-weight: bold;
+}
+
+.label_droite {
+	text-align: right;
+}
+
+.colcol {
+/* 	border: 1px solid black; */
+}
+
+input.classic, select.classic {
+	width: 100%;
+	border: 1px solid #0080c0;
+	border-bottom: 1px solid #48c4ff;
+	border-right: 1px solid #48c4ff;
+	border-radius: 3px;
+	padding-left: 5px;
+	color: #0080c0;
+	height: 40px;
+}
+
+input.disabled {
+	background-color: white;
+}
+
+.vcenter {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.bouton_retour {
+	float: right;	
+}
+
+.input-group-addon {
+	border: 1px solid #0080c0;
+	border-bottom: 1px solid #48c4ff;
+	border-right: 1px solid #48c4ff;
+	background-color: #c6e6ff;
+}
+
+span .erreur, span .redcompte {
+	color: #a8171b;
+}

@@ -4,20 +4,22 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-	<title>Login</title>
+	<title>#{messages['titre.login']}</title>
+	<h:outputStylesheet value="css/stle.css"/>
+	<h:outputStylesheet value="css/bootstrap/css/bootstrap.min.css"/>
 </h:head>
 
 <h:body>
 	<FORM action="j_security_check">
 		<div>
 
-			<h:outputText value="Login : " />
+			<h:outputText value="#{messages['login.login']} : " />
 			<INPUT type="text" name="j_username" />
-			<h:outputText value="Mot De Passe : " />
+			<h:outputText value="#{messages['login.password']} : " />
 			<INPUT type="password" name="j_password" />
 		</div>
 		<div>
-			<INPUT type="submit" value="Se Loguer" />
+			<INPUT type="submit" value="#{messages['login.connexion']}" />
 		</div>
 	</FORM>
 </h:body>

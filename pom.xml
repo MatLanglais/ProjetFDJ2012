@@ -50,12 +50,12 @@
 			<!-- <scope>runtime</scope> -->
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>javax.servlet</groupId> -->
-<!-- 			<artifactId>servlet-api</artifactId> -->
-<!-- 			<version>${servlet.version}</version> -->
-<!-- 			<scope>provided</scope> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.servlet</groupId> -->
+		<!-- <artifactId>servlet-api</artifactId> -->
+		<!-- <version>${servlet.version}</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -63,11 +63,11 @@
 			<version>2.2.4</version>
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.sun.faces</groupId> -->
-<!-- 			<artifactId>mojarra-jsf-api</artifactId> -->
-<!-- 			<version>2.0.0-b04</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.sun.faces</groupId> -->
+		<!-- <artifactId>mojarra-jsf-api</artifactId> -->
+		<!-- <version>2.0.0-b04</version> -->
+		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -75,11 +75,11 @@
 			<version>2.2.4</version>
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.sun.faces</groupId> -->
-<!-- 			<artifactId>mojarra-jsf-impl</artifactId> -->
-<!-- 			<version>2.0.0-b04</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.sun.faces</groupId> -->
+		<!-- <artifactId>mojarra-jsf-impl</artifactId> -->
+		<!-- <version>2.0.0-b04</version> -->
+		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -92,8 +92,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.1.2</version>
 		</dependency>
-		
-		
+
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.0</version>
+		</dependency>
+
+
 	</dependencies>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
